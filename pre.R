@@ -64,7 +64,7 @@ paper1 = subset(book1, formats == "Paperback")
 audio1 = subset(book1, formats == "Audio CD")
 
 
-#manipulate and order by DATE
+#manipulate DATE!!!!!!!
 
 # %Y: 4-digit year (1982), %y: 2-digit year (82), %m: 2-digit month (01), %d: 2-digit day of the month (13), 
 # %A: weekday (Wednesday)%a: abbreviated weekday (Wed), %B: month (January), %b: abbreviated month (Jan)
@@ -85,17 +85,25 @@ hard6=arrange(hard6, dates)
 
 #######################task 0309 ends
 
-#character & word count
+#character count
 library(qdap)
-character_count(hard1$texts)
+
+#deletion outlier
+#hard1.small = after deletion outlier
+hard1.small=hard1[-243,]
+
+character_count(hard1.small$texts)
 sum(character_count(hard1$texts))
 mean(character_count(hard1$texts))
 sd(character_count(hard1$texts))
-plot(character_count(hard1$texts), ylab="character count", main = "[Book1] Character # of Hardcover")
-View(hard1)
-testdate <- hard1[rev(order(as.Date(hard1$dates))),]
 
+plot(character_count(hard1.small$texts), ylab="character count", main = "[Book1] Character # of Hardcover")
+
+#word count
+library(qdap)
 plot(wc(hard1$texts))
+
+
 sum(wc(hard1$texts))
 
 
