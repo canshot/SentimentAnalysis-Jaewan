@@ -13,7 +13,7 @@ book4 <- read.csv("C:/Users/jae12/Box Sync/3. IS 804/CourseProject/Data/Mydf4.cs
 book5 <- read.csv("C:/Users/jae12/Box Sync/3. IS 804/CourseProject/Data/Mydf5.csv", stringsAsFactors = FALSE)
 book6 <- read.csv("C:/Users/jae12/Box Sync/3. IS 804/CourseProject/Data/Mydf6.csv", stringsAsFactors = FALSE)
 
-do.call(rbind,lapply(paste('X',1:i,sep=''),get))
+#do.call(rbind,lapply(paste('X',1:i,sep=''),get))
 
 ##Select the review on Hardcover 
 
